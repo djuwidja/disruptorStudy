@@ -1,0 +1,35 @@
+plugins {
+	id 'java'
+	id "io.freefair.lombok" version "4.1.6"
+}
+
+group = 'com.djuwidja'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+apply plugin: 'io.freefair.lombok'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	// https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-engine
+	testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version: '5.5.2'
+    // https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api
+    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.5.2'
+    // https://mvnrepository.com/artifact/org.junit.platform/junit-platform-runner
+    testImplementation group: 'org.junit.platform', name: 'junit-platform-runner', version: '1.5.2'
+    // https://mvnrepository.com/artifact/org.mockito/mockito-junit-jupiter
+	testImplementation group: 'org.mockito', name: 'mockito-junit-jupiter', version: '3.1.0'
+	
+	// https://mvnrepository.com/artifact/org.projectlombok/lombok
+	implementation group: 'org.projectlombok', name: 'lombok', version: '1.18.12'
+	
+	// https://mvnrepository.com/artifact/com.lmax/disruptor
+	implementation group: 'com.lmax', name: 'disruptor', version: '3.4.2'	
+}
+
+test {
+	useJUnitPlatform()
+}
