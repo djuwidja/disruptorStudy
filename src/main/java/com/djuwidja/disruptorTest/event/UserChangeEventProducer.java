@@ -14,6 +14,6 @@ public class UserChangeEventProducer extends EventProducer<UserChangeEvent>{
 
 	@Override
 	protected void readEventByteBuffer(UserChangeEvent event, ByteBuffer bb) {
-		UserChangeEventByteBufferUtil.readByteBuffer(event, bb);	
+		UserChangeEventByteBufferUtil.readByteBuffer(event, bb);
 	}
 }
