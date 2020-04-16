@@ -6,4 +6,5 @@ import lombok.Setter;
 public class UserChangeEvent {
 	@Getter @Setter private int userId;
 	@Getter @Setter private String name;
+	@Getter @Setter private long eventTime;
 }

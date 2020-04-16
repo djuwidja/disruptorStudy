@@ -17,7 +17,7 @@ public abstract class EventProducer<T> {
 	private EventTranslatorOneArg<T, ByteBuffer> TRANSLATOR = 
 		new EventTranslatorOneArg<T, ByteBuffer>(){
 			public void translateTo(T event, long sequence, ByteBuffer bb) {
-				System.out.println(String.format("Read ByteBuffer instance %s, event instance %s", bb, event));
+//				System.out.println(String.format("Read ByteBuffer instance %s, event instance %s", bb, event));
 				readEventByteBuffer(event, bb);
 			}
 		};
